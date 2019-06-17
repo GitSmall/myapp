@@ -1,0 +1,45 @@
+/* 自定义 */
+.lf {
+	float: left;
+}
+.rt {
+	float: right;
+}
+.hide {
+	overflow: hidden;
+}
+
+
+uni-page-body {
+	height: 100%;
+}
+.uni-body {
+	font-size: 28upx;
+	background-color: #fff;
+}
+.page_content {
+	padding: 40upx;
+}
+
+/* // form */
+.uni-form-item {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	height: 90upx;
+	line-height: 90upx;
+}
+.uni-form-item .title {
+	width: 150upx;
+}
+.uni-form-item .uni-input {
+	flex: 1;
+	height: 90upx;
+	line-height: 90upx;
+}
+button {
+	font-size: 32upx;
+	background-color: #FFDA44;
+}
+button:after {
+	border: none;
+}

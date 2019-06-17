@@ -1,0 +1,6 @@
+{
+  "titleNView": false,
+  "usingComponents": {
+    "m-notip": "/components/m-notip/notip"
+  }
+}

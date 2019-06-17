@@ -1,0 +1,80 @@
+@import url(http://at.alicdn.com/t/font_1241306_mv4uzdq0d4.css);
+
+/*每个页面公共css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 自定义 */
+.lf {
+	float: left;
+}
+.rt {
+	float: right;
+}
+.hide {
+	overflow: hidden;
+}
+uni-page-body {
+	height: 100%;
+}
+.uni-body {
+	font-size: 28rpx;
+	background-color: #fff;
+}
+.page_content {
+	padding: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* // form */
+.uni-form-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	border-bottom: 1px solid #ddd;
+	height: 90rpx;
+	line-height: 90rpx;
+}
+.uni-form-item .title {
+	width: 150rpx;
+}
+.uni-form-item .uni-input {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	height: 90rpx;
+	line-height: 90rpx;
+}
+button {
+	font-size: 32rpx;
+	background-color: $bg-main;
+}
+button:after {
+	border: none;
+}
+
