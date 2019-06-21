@@ -54,7 +54,11 @@
 						console.log(res.data);
 						if(res.data.code == 0) {
 							utils.lightMsg('登录成功');
-							
+							try {
+								uni.setStorageSync('userInfo', res.data);
+							} catch (e) {
+								// error
+							}
 							// setTimeout(function() {
 							// 	console.log('000')
 							// 	uni.switchTab({

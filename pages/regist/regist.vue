@@ -58,10 +58,12 @@
 					success: (res) => {
 						console.log(res.data);
 						if(res.data.code == 0) {
-							utils.lightMsg('注册成功, 2秒后跳转到登录页面', 2000);
-							uni.redirectTo({
-								url: '/pages/login/login'
-							});
+							utils.lightMsg('注册成功, 即将跳转到登录页面', 2000);
+							setTimeout(function() {
+								uni.redirectTo({
+									url: '/pages/login/login'
+								});
+							}, 2000)
 						} else {
 							utils.lightMsg(res.data.message)
 						}

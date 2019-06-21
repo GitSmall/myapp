@@ -1,30 +1,30 @@
 <template>
 	<view class="body">
-		<wuc-tab :tab-list="tabList" :tabCur.sync="TabCur" tab-class="text-center" selectClass="text-black" />
+		<wuc-tab :tab-list="tabList" :tabCur.sync="TabCur" tab-class="text-center" selectClass="text-black" @change="tabChange" />
 		<swiper :current="TabCur" class="swiper" duration="300" :circular="true" indicator-color="rgba(255,255,255,0)"
 		 indicator-active-color="rgba(255,255,255,0)" @change="swiperChange">
 			<swiper-item>
 				<view class="content">
-					<view class="line" v-for="(item, index) in icons.out" :key="index">
-						<view class="item" v-for="(n, i) in item" :key="i" @tap="selectType(n.name)">
+					<!-- <view class="line" v-for="(item, index) in icon.out" :key="index"> -->
+						<view class="item" v-for="(n, i) in getTypes.out" :key="i" @tap="selectType(n.name)">
 							<text :class="['img', n.name==select?'active':'']">
 								<i :class="['iconfont', n.icon]"></i>
 							</text>
 							<text class="text">{{n.name}}</text>
 						</view>
-					</view>
+					<!-- </view> -->
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="content">
-					<view class="line" v-for="(item, index) in icons.in" :key="index">
-						<view class="item" v-for="(n, i) in item" :key="i" @tap="selectType(n.name)">
+					<!-- <view class="line" v-for="(item, index) in getTypes.in" :key="index"> -->
+						<view class="item" v-for="(n, i) in getTypes.in" :key="i" @tap="selectType(n.name)">
 							<text :class="['img', n.name==select?'active':'']">
 								<i :class="['iconfont', n.icon]"></i>
 							</text>
 							<text class="text">{{n.name}}</text>
 						</view>
-					</view>
+					<!-- </view> -->
 				</view>
 			</swiper-item>
 		</swiper>
@@ -68,7 +68,8 @@
 
 <script>
 	import WucTab from '@/components/wuc-tab/wuc-tab.vue';
-	import uniPopup from "@/components/uni-popup/uni-popup.vue"
+	import uniPopup from "@/components/uni-popup/uni-popup.vue";
+	import { types } from '@/common/js/types.js'
 	export default {
 		data() {
 			const currentDate = this.getDate({
@@ -267,7 +268,8 @@
 							}
 						]
 					]
-				}
+				},
+				getTypes: types
 			}
 		},
 		computed: {
@@ -329,6 +331,7 @@
 			},
 			tabChange(index) {
 				this.TabCur = index;
+				this.showPopup = false;
 			},
 			swiperChange(e) {
 				this.TabCur = e.target.current;
@@ -499,7 +502,7 @@
 				.content {
 					padding: 40upx 0;
 
-					.line {
+					// .line {
 						.item {
 							float: left;
 							display: flex;
@@ -530,7 +533,7 @@
 								font-size: 24upx;
 							}
 						}
-					}
+					// }
 				}
 			}
 		}
