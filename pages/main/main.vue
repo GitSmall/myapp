@@ -2,7 +2,7 @@
 	<view class="page">
 		<view class="head">
 			<view class="logo">
-				<img src="/static/logo.png" alt="">贝利
+				<img src="/static/logo.png" alt="" @tap="gogo">贝利
 			</view>
 			<view class="census">
 				<picker mode="date" fields="month" :value="date" :start="startDate" :end="endDate" @change="bindDateChange">
@@ -150,6 +150,9 @@
 					resArr.push(obj)
 					this.reslist = resArr;
 				}
+			},
+			gogo() {
+				uni.navigateTo({url: '/pages/chart/chart'});
 			}
 		}
 	}

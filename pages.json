@@ -9,6 +9,22 @@
 			}
 		},
 		{
+			"path": "pages/chart/chart",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/chart/index",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/index/start",
 			"style": {
 				"app-plus": {
